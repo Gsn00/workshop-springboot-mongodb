@@ -1,5 +1,7 @@
 package app.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,5 +17,9 @@ public class PostService {
 	
 	public Post findById(String id) {
 		return postRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Post não encontrado"));
+	}
+	
+	public List<Post> findByTitle(String text) {
+		return postRepository.findByTitleContainingIgnoreCase(text);
 	}
 }
