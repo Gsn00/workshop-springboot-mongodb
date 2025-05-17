@@ -28,6 +28,12 @@ public class UserService {
 		return userRepository.insert(obj);
 	}
 	
+	public void delete(String id) {
+		//Caso não exista o usuário, lança uma exception
+		findById(id);
+		userRepository.deleteById(id);
+	}
+	
 	public User fromDto(UserDTO dto) {
 		User user = new User(dto.getId(), dto.getName(), dto.getEmail());
 		return user;
