@@ -26,6 +26,14 @@ public class PostResource {
 	@Autowired
 	private PostService postService;
 	
+	@Operation(description = "Retorna todos os posts e seus comentários")
+	@ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna a lista com posts")})
+	@GetMapping
+	public ResponseEntity<List<Post>> findAll() {
+		List<Post> posts = postService.findAll();
+		return ResponseEntity.ok().body(posts);
+	}
+	
 	@Operation(description = "Retorna um post por seu ID")
 	@ApiResponses(value = {
 			@ApiResponse(responseCode = "200", description = "Retorna o post com sucesso"),
