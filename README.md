@@ -1,6 +1,6 @@
 # Workshop Spring Boot com MongoDB
 
-Este projeto é uma API RESTful desenvolvida com Java, Spring Boot e MongoDB, originalmente baseada no curso Java Completo do professor Nélio Alves.
+Este projeto é uma API RESTful desenvolvida com Java, Spring Boot e MongoDB, originalmente baseada no curso Java Completo Programação Orientada a Objetos do professor Nélio Alves.
 A API permite o gerenciamento completo de usuários e seus posts, incluindo:
 
  - Cadastro, busca, atualização e exclusão de usuários
@@ -15,7 +15,6 @@ A API permite o gerenciamento completo de usuários e seus posts, incluindo:
 
    - Intervalo de datas personalizável (data mínima e máxima)
 
----
 
 ## Melhorias e customizações feitas
 
@@ -30,7 +29,6 @@ Além da base ensinada no curso, este repositório inclui:
 - ✅ Cobertura de testes com **JaCoCo**
 - ✅ Estrutura pronta para rodar facilmente localmente
 
----
 
 ## Tecnologias utilizadas
 
@@ -43,7 +41,6 @@ Além da base ensinada no curso, este repositório inclui:
 - JUnit 5
 - Postman (testes de API e validação dos endpoints)
 
----
 
 ## Como rodar o projeto localmente
 
@@ -76,3 +73,11 @@ A interface do Swagger permite testar todos os endpoints diretamente do navegado
  - Ao iniciar o projeto, dados iniciais são carregados automaticamente (através do Instantiation).
 
  - Você pode consultar, cadastrar novos usuários, criar posts e adicionar comentários via Swagger.
+
+
+## Autor
+
+Projeto base desenvolvido no curso **Java Completo Programação Orientada a Objetos** do professor [Nélio Alves](https://github.com/acenelio).
+
+Este repositório foi criado e customizado por [Gabriel Novais](https://github.com/Gsn00), que adicionou testes automatizados, Lombok, Swagger e outras melhorias.
+
