@@ -26,8 +26,11 @@ public class UserService {
 		return userRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Usuário não encontrado"));
 	}
 	
-	public User insert(User obj) {
-		return userRepository.insert(obj);
+	public User insert(User user) {
+		if (user.getName() == null || user.getName().isBlank()) throw new IllegalArgumentException("Atributos inválidos");
+		if (user.getEmail() == null || user.getEmail().isBlank()) throw new IllegalArgumentException("Atributos inválidos");
+		
+		return userRepository.insert(user);
 	}
 	
 	public void delete(String id) {
@@ -37,12 +40,15 @@ public class UserService {
 	}
 	
 	public User update(User user) {
-		User newUser = userRepository.findById(user.getId()).get();
+		User newUser = findById(user.getId());
 		updateData(newUser, user);
 		return userRepository.save(newUser);
 	}
 	
 	private void updateData(User newUser, User user) {
+		if (user.getName() == null || user.getName().isBlank()) throw new IllegalArgumentException("Atributos inválidos");
+		if (user.getEmail() == null || user.getEmail().isBlank()) throw new IllegalArgumentException("Atributos inválidos");
+		
 		newUser.setName(user.getName());
 		newUser.setEmail(user.getEmail());
 	}
