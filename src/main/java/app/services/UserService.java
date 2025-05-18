@@ -21,6 +21,8 @@ public class UserService {
 	}
 	
 	public User findById(String id) {
+		if (id == null) throw new IllegalArgumentException("ID inválido.");
+		
 		return userRepository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Usuário não encontrado"));
 	}
 	
