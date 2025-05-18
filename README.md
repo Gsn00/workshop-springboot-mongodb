@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Gsn00/workshop-springboot3-jpa/blob/main/LICENSE)
+
 # Workshop Spring Boot com MongoDB
 
 Este projeto é uma API RESTful desenvolvida com Java, Spring Boot e MongoDB, originalmente baseada no curso Java Completo Programação Orientada a Objetos do professor Nélio Alves.
