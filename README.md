@@ -87,7 +87,7 @@ Aqui você pode ver a API funcionando através do Swagger UI, com exemplos prát
 ### Users -> findById
 ![users-findById](https://github.com/user-attachments/assets/997fd52d-cced-4e2e-aec6-7e23c599019c)
 
-### Pots -> findAll e fullsearch
+### Posts -> findAll e fullsearch
 ![posts-findAll e fullsearch](https://github.com/user-attachments/assets/2104c80f-55ba-44a0-a545-2263533dcb25)
 
 ## Autor
